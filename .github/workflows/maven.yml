@@ -24,3 +24,14 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
 
+    - name: Nexus Repo Publish
+      uses: sonatype-nexus-community/nexus-repo-github-action@master
+      with:
+        serverUrl: https://oss.sonatype.org/content/repositories/snapshots
+        username: ${{ secrets.SONARTYPE_USER }}
+        password: ${{ secrets.SONARTYPE_SEC }}
+        format: maven2
+        repository: maven-releases
+        coordinates: groupId=net.loobpack artifactId=kafka-connect-healthcheck-extension version=0.0.5
+        assets: extension=jar
+        filename: ./target/kafka-connect-healthcheck-extension-0.0.5-SNAPSHOT.jar
