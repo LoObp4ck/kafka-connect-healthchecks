@@ -51,6 +51,14 @@
     </repository>
   </repositories>
 
+  <distributionManagement>
+    <snapshotRepository>
+      <id>nexus-snapshot</id>
+      <name>Nexus Sonatype Snapshots</name>
+      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+    </snapshotRepository>
+  </distributionManagement>
+
   <pluginRepositories>
     <pluginRepository>
       <snapshots>
