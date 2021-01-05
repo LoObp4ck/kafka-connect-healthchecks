@@ -15,6 +15,12 @@
 *.log
 logs/*
 
+# JAVA
+#######
+target/*
+
+dependency-reduced-pom.xml
+
 # OS/Editors generated files #
 ##############################
 .DS_Store
