@@ -1,0 +1,3 @@
+X-Loobpack-Comments: This is Mock file. Actual values are set in POM file during packaging
+X-Loobpack-Module: kafka-connect-healthcheck-extension
+X-Loobpack-Version: 0.0.1

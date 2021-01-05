@@ -1,0 +1,7 @@
+com\loobpack\data\kafka\connect\healthcheck\extension\model\ConnectorHealth.class
+com\loobpack\data\kafka\connect\healthcheck\extension\HealthCheckConnectRestExtension.class
+com\loobpack\data\kafka\connect\healthcheck\extension\healthcheck\HealthCheckResource.class
+com\loobpack\data\kafka\connect\healthcheck\extension\model\ConnectorStatus$ConnectorStatusBuilder.class
+com\loobpack\data\kafka\connect\healthcheck\extension\ManifestReader.class
+com\loobpack\data\kafka\connect\healthcheck\extension\model\ConnectorStatus.class
+com\loobpack\data\kafka\connect\healthcheck\extension\service\HealthCheckService.class

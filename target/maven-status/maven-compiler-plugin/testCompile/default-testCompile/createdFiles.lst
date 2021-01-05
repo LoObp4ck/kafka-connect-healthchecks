@@ -1,0 +1,10 @@
+com\loobpack\data\kafka\connect\healthcheck\extension\service\HealthCheckServiceTest.class
+com\loobpack\data\kafka\connect\healthcheck\extension\healthcheck\HealthCheckResourceTest$1.class
+com\loobpack\data\kafka\connect\healthcheck\extension\healthcheck\HealthCheckResourceTest$5.class
+com\loobpack\data\kafka\connect\healthcheck\extension\healthcheck\HealthCheckResourceTest.class
+com\loobpack\data\kafka\connect\healthcheck\extension\HealthCheckConnectRestExtensionTest.class
+com\loobpack\data\kafka\connect\healthcheck\extension\HealthCheckEndpointIT.class
+com\loobpack\data\kafka\connect\healthcheck\extension\healthcheck\HealthCheckResourceTest$3.class
+com\loobpack\data\kafka\connect\healthcheck\extension\ManifestReaderTest.class
+com\loobpack\data\kafka\connect\healthcheck\extension\healthcheck\HealthCheckResourceTest$2.class
+com\loobpack\data\kafka\connect\healthcheck\extension\healthcheck\HealthCheckResourceTest$4.class

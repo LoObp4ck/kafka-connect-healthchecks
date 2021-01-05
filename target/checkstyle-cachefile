@@ -1,0 +1,7 @@
+#Tue Jan 05 23:05:30 CET 2021
+configuration*?=42F7EB4E9696399CD6AB29E0C26ABB5A2629A96E
+C\:\\Users\\adrien\\projects\\loObp4ck\\kafka-connect-healthchecks\\src\\main\\java\\com\\loobpack\\data\\kafka\\connect\\healthcheck\\extension\\model\\ConnectorHealth.java=1609884052244
+C\:\\Users\\adrien\\projects\\loObp4ck\\kafka-connect-healthchecks\\src\\main\\java\\com\\loobpack\\data\\kafka\\connect\\healthcheck\\extension\\model\\ConnectorStatus.java=1609884052245
+module-resource*?\:checkstyle-xpath-suppressions.xml=CDDA26B075370F03C1A97C3EC8972B21EC1B530
+module-resource*?\:checkstyle-suppressions.xml=5A14F117350FC124AA459FFFEAF30B1E14ED7722
+C\:\\Users\\adrien\\projects\\loObp4ck\\kafka-connect-healthchecks\\src\\main\\java\\com\\loobpack\\data\\kafka\\connect\\healthcheck\\extension\\HealthCheckConnectRestExtension.java=1609884052240

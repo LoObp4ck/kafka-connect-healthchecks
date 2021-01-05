@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="8.29">
+<file name="C:\Users\adrien\projects\loObp4ck\kafka-connect-healthchecks\src\main\java\com\loobpack\data\kafka\connect\healthcheck\extension\healthcheck\HealthCheckResource.java">
+<error line="27" column="3" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocMethodCheck"/>
+</file>
+<file name="C:\Users\adrien\projects\loObp4ck\kafka-connect-healthchecks\src\main\java\com\loobpack\data\kafka\connect\healthcheck\extension\HealthCheckConnectRestExtension.java">
+</file>
+<file name="C:\Users\adrien\projects\loObp4ck\kafka-connect-healthchecks\src\main\java\com\loobpack\data\kafka\connect\healthcheck\extension\ManifestReader.java">
+<error line="12" column="3" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocMethodCheck"/>
+</file>
+<file name="C:\Users\adrien\projects\loObp4ck\kafka-connect-healthchecks\src\main\java\com\loobpack\data\kafka\connect\healthcheck\extension\model\ConnectorHealth.java">
+</file>
+<file name="C:\Users\adrien\projects\loObp4ck\kafka-connect-healthchecks\src\main\java\com\loobpack\data\kafka\connect\healthcheck\extension\model\ConnectorStatus.java">
+</file>
+<file name="C:\Users\adrien\projects\loObp4ck\kafka-connect-healthchecks\src\main\java\com\loobpack\data\kafka\connect\healthcheck\extension\service\HealthCheckService.java">
+<error line="9" severity="warning" message="Extra separation in import group before &apos;java.util.List&apos;" source="com.puppycrawl.tools.checkstyle.checks.imports.CustomImportOrderCheck"/>
+<error line="25" column="3" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocMethodCheck"/>
+</file>
+</checkstyle>
