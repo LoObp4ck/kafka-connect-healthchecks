@@ -21,17 +21,20 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 1.8
-    - name: Build with Maven
-      run: mvn -B package --file pom.xml
-
-    - name: Nexus Repo Publish
-      uses: sonatype-nexus-community/nexus-repo-github-action@master
+    - uses: s4u/maven-settings-action@v2.3.0
       with:
-        serverUrl: https://oss.sonatype.org/content/repositories/snapshots
-        username: ${{ secrets.SONARTYPE_USER }}
-        password: ${{ secrets.SONARTYPE_SEC }}
-        format: maven2
-        repository: Snapshots
-        coordinates: groupId=net.loobpack.kafka-connect-healthchecks artifactId=kafka-connect-healthcheck-extension version=0.0.6-SNAPSHOT
-        assets: extension=jar
-        filename: ./target/kafka-connect-healthcheck-extension-0.0.6-SNAPSHOT.jar
+        servers: '[{"id": "sonartype", "username": "${{ secrets.SONARTYPE_USER }}", "password": "${{ secrets.SONARTYPE_SEC }}"}]'
+    - name: Build with Maven
+      run: mvn -B package --file pom.xml && mvn deploy
+
+#     - name: Nexus Repo Publish
+#       uses: sonatype-nexus-community/nexus-repo-github-action@master
+#       with:
+#         serverUrl: https://oss.sonatype.org/content/repositories/snapshots
+#         username: ${{ secrets.SONARTYPE_USER }}
+#         password: ${{ secrets.SONARTYPE_SEC }}
+#         format: maven2
+#         repository: Snapshots
+#         coordinates: groupId=net.loobpack.kafka-connect-healthchecks artifactId=kafka-connect-healthcheck-extension version=0.0.6-SNAPSHOT
+#         assets: extension=jar
+#         filename: ./target/kafka-connect-healthcheck-extension-0.0.6-SNAPSHOT.jar

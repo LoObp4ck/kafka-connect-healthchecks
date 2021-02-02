@@ -7,7 +7,7 @@
 
   <groupId>net.loobpack.kafka-connect-healthchecks</groupId>
   <artifactId>kafka-connect-healthcheck-extension</artifactId>
-  <version>0.0.6-SNAPSHOT</version>
+  <version>0.0.7-SNAPSHOT</version>
 
   <name>kafka-connect-healthcheck-extension</name>
 
