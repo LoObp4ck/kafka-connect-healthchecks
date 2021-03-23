@@ -59,8 +59,8 @@
     </snapshotRepository>
     <repository>
       <id>sonatypeRelease</id>
-      <name>Nexus Sonatype Releases</name>
-      <url>https://oss.sonatype.org/content/repositories/releases</url>
+      <name>Nexus Sonatype Releases staging area</name>
+      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
     </repository>
   </distributionManagement>
 
