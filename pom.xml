@@ -57,11 +57,11 @@
       <name>Nexus Sonatype Snapshots</name>
       <url>https://oss.sonatype.org/content/repositories/snapshots</url>
     </snapshotRepository>
-    <releaseRepository>
+    <repository>
       <id>sonatypeRelease</id>
       <name>Nexus Sonatype Releases</name>
       <url>https://oss.sonatype.org/content/repositories/releases</url>
-    </releaseRepository>
+    </repository>
   </distributionManagement>
 
   <pluginRepositories>
