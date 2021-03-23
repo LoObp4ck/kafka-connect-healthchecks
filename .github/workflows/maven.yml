@@ -23,7 +23,7 @@ jobs:
         java-version: 1.8
     - uses: s4u/maven-settings-action@v2.3.0
       with:
-        servers: '[{"id": "sonartype", "username": "${{ secrets.SONARTYPE_USER }}", "password": "${{ secrets.SONARTYPE_SEC }}"}]'
+        servers: '[{"id": "sonatype", "username": "${{ secrets.SONARTYPE_USER }}", "password": "${{ secrets.SONARTYPE_SEC }}"}, {"id": "sonatypeRelease", "username": "${{ secrets.SONARTYPE_USER }}", "password": "${{ secrets.SONARTYPE_SEC }}"}]'
     - name: Build with Maven
       run: mvn -B package --file pom.xml && mvn deploy
 

@@ -7,7 +7,7 @@
 
   <groupId>net.loobpack.kafka-connect-healthchecks</groupId>
   <artifactId>kafka-connect-healthcheck-extension</artifactId>
-  <version>0.0.7-SNAPSHOT</version>
+  <version>1.0.0</version>
 
   <name>kafka-connect-healthcheck-extension</name>
 
@@ -53,10 +53,15 @@
 
   <distributionManagement>
     <snapshotRepository>
-      <id>sonartype</id>
+      <id>sonatype</id>
       <name>Nexus Sonatype Snapshots</name>
       <url>https://oss.sonatype.org/content/repositories/snapshots</url>
     </snapshotRepository>
+    <releaseRepository>
+      <id>sonatypeRelease</id>
+      <name>Nexus Sonatype Releases</name>
+      <url>https://oss.sonatype.org/content/repositories/releases</url>
+    </releaseRepository>
   </distributionManagement>
 
   <pluginRepositories>
