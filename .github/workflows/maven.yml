@@ -1,0 +1,45 @@
+# This workflow will build a Java project with Maven
+# For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-maven
+
+name: Build KC HC library
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up JDK 1.8
+      uses: actions/setup-java@v1
+      with:
+        java-version: 1.8
+    - name: Import GPG Key
+      uses: crazy-max/ghaction-import-gpg@v1
+      env:
+        GPG_PRIVATE_KEY: ${{ secrets.GPG_KEY }}
+        PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
+    - uses: s4u/maven-settings-action@v2.3.0
+      with:
+        servers: '[{"id": "sonatype", "username": "${{ secrets.SONARTYPE_USER }}", "password": "${{ secrets.SONARTYPE_SEC }}"}, {"id": "sonatypeRelease", "username": "${{ secrets.SONARTYPE_USER }}", "password": "${{ secrets.SONARTYPE_SEC }}"}]'
+    - name: Build with Maven
+      run: mvn -B package --file pom.xml && mvn deploy -Psonatype
+
+#     - name: Nexus Repo Publish
+#       uses: sonatype-nexus-community/nexus-repo-github-action@master
+#       with:
+#         serverUrl: https://oss.sonatype.org/content/repositories/snapshots
+#         username: ${{ secrets.SONARTYPE_USER }}
+#         password: ${{ secrets.SONARTYPE_SEC }}
+#         format: maven2
+#         repository: Snapshots
+#         coordinates: groupId=net.loobpack.kafka-connect-healthchecks artifactId=kafka-connect-healthcheck-extension version=0.0.6-SNAPSHOT
+#         assets: extension=jar
+#         filename: ./target/kafka-connect-healthcheck-extension-0.0.6-SNAPSHOT.jar
