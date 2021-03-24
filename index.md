@@ -1,37 +1,27 @@
-## Welcome to GitHub Pages
+# kafka-connect-healthchecks
 
-You can use the [editor on GitHub](https://github.com/LoObp4ck/kafka-connect-healthchecks/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+This is [Kafka Connect Extension](https://cwiki.apache.org/confluence/display/KAFKA/KIP-285%3A+Connect+Rest+Extension+Plugin) that exposes a `/healthcheck` endpoint that can used to retrieve the health status of each connector running in the cluster.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+For now, it will check that, for all connectors that are part of your Kafka Connect cluster, all tasks are in RUNNING state ( we'll make that more tunable soon).
 
-### Markdown
+## How to install
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Copy the JAR file into the `plugin.path` (or `CONNECT_PLUGIN_PATH` if you are using env vars) directory and the set the property `rest.extension.classes` (or `CONNECT_REST_EXTENSION_CLASSES` env var) with the full qulified name of the extension class, e.g. `CONNECT_REST_EXTENSION_CLASSES=com.loobpack.data.kafka.connect.healthcheck.extension.HealthCheckConnectRestExtension`.
 
-```markdown
-Syntax highlighted code block
+Note that, as per the official documentation, you can configure more than one extension if you specify the classes with comma-separated values.
 
-# Header 1
-## Header 2
-### Header 3
+Finally you can also access the JAR from maven central repository
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```
+<dependency>
+  <groupId>net.loobpack.kafka-connect-healthchecks</groupId>
+  <artifactId>kafka-connect-healthcheck-extension</artifactId>
+  <version>1.0.0</version>
+</dependency>
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+## Special thanks
 
-### Jekyll Themes
+He did not have the time to commit by himself, but most of the initial work here has been made by @ddcprg, thx =)
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/LoObp4ck/kafka-connect-healthchecks/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+Thx Vonage/Nexmo (initially intented for internal uses) as well for letting us publish this piece of work
