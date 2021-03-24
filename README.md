@@ -10,6 +10,16 @@ Copy the JAR file into the `plugin.path` (or `CONNECT_PLUGIN_PATH` if you are us
 
 Note that, as per the official documentation, you can configure more than one extension if you specify the classes with comma-separated values.
 
+Finally you can also access the JAR from maven central repository
+
+```
+<dependency>
+  <groupId>net.loobpack.kafka-connect-healthchecks</groupId>
+  <artifactId>kafka-connect-healthcheck-extension</artifactId>
+  <version>1.0.0</version>
+</dependency>
+```
+
 ## Special thanks
 
 He did not have the time to commit by himself, but most of the initial work here has been made by @ddcprg, thx =)
